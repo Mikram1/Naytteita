@@ -1,0 +1,50 @@
+Käytön aloitus: git init
+
+- Aloittaa uuden session.
+
+Asetusten säätö: git config --global user.name "nimi", git config --global user.email "email"
+
+- Säätää muille näkyvän nimen & emailin. Ei liity kirjautumiseen mitenkään. Tällä näkee, ketkä tekee päivityksiä.
+
+Tiedostojen lisäys: git add x (jossa x on lisättävä tiedosto. TAI git add ., lisää kaikki tiedostot!)
+Tiedostojen tilan tarkistus: git status 
+
+- Näyttää seuratut tiedostot & tehdyt muutokset ennen committia
+
+Loki: git log
+
+Tiedostojen vienti/TALLENNUS: git commit (TAI git commit -m "viesti")
+
+- commit vs. pull: commit tekee muutokset nykyiseen repoon. Push vie ne eteenpäin, siis "tallentaa".
+
+Liikkuminen eri versioiden välillä: git checkout *git-koodi
+
+- Committeja tehdessä eri siirrot yksilöi tunnus, joka nähdään logissa. Tällä komennolla voi siirtyä edellisiin versioihin.
+
+Uusi branch: git branch (nimi)
+Nykyisen branchin tarkistus: git branch
+Liikkuminen branchien välillä: git checkout *branchnimi 
+Nykyisen branchin yhdistäminen masteriin: git merge *branchnimi
+
+REMOTE OPERAATIOT:
+
+git remote add *nimi www.github.com/xxx
+
+- Lisää sijainnin, josta haetaan/laitetaan tavaraa. *nimi määrittää paikallisen nimen sijainnille
+
+git remote -v
+
+- Listaa nykyiset sijainnit
+
+git push -u *nimi *branchname
+
+- Siirtää git-kansion *nimi-branchin (määritetty aluksi!) haluttuun branchiin (videoesimerkissä master). -u komento määrittää tämän käytettävän jatkossa
+  samalla tavalla. Säästää siis vaivaa, jatkossa toimii pelkällä pushilla.
+
+git pull -u *nimi *branchname
+
+- Sama toisinpäin
+
+git clone *sivuosoite
+
+- Kloonaa githubista hakemiston, kaikki commit-viestit jne. Pushaaminen ei mahdollista
