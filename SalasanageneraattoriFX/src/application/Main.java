@@ -7,7 +7,10 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.fxml.FXMLLoader;
 
-
+/**
+ * P‰‰ohjelma applikaation ajamiseksi.
+ * @author Mikko Toitturi
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {

@@ -15,15 +15,16 @@ import org.w3c.dom.NodeList;
 
 
 /**
- * Tekee XML-tiedoston sopivista sanoista .txt-tiedoston.
- * @author toittmik
- *
+ * Erittelee KOTUS-sanalistasta (vastaa sanakirjaa) eri salasanoihin sopivat sanat pituuden ja selvyyden perusteella.
+ * KOTUS-sanalista on xml-muodossa, joten tekee erilliset .txt-tiedostot sopivista KU- ja SAP-salasanoista.
+ * KU- ja SAP-salasanojen vaatimukset eritelty omissa aliohjelmissaan.
+ * @author Mikko Toitturi
  */
 public class XMLParser {
 
-	static List<String> sanalista = new ArrayList<String>();
-	static List<String> kasisana = new ArrayList<String>(); 
-	static List<String> viistoistsana = new ArrayList<String>();
+	static List<String> sanalista = new ArrayList<String>();		//Kaikki l‰pik‰yt‰v‰t sanat
+	static List<String> kasisana = new ArrayList<String>(); 		//SAP-salasanoiksi kelpuutetut sanat
+	static List<String> viistoistsana = new ArrayList<String>();	//KU-salasanoiksi kelpuutetut sanat
 	
 	public static void main(String[] args) {
 		
@@ -80,7 +81,8 @@ public class XMLParser {
 	}
 	
 	/**
-	 * Rajaa listan sanat 6-9 pituisiin sanoihin. Lis‰‰ v‰h. 1 numeron ja tekee ison kirjaimen, jotta salasanavaatimus t‰yttyy. (v‰h. 8 kirjainta, v‰h. 1 numero, v‰h. 1 iso kirjain).
+	 * Rajaa listan sanat 6-9 pituisiin sanoihin SAP-salasanoja varten. 
+	 * Lis‰‰ v‰h. 1 numeron ja tekee ison kirjaimen, jotta salasanavaatimus t‰yttyy. (v‰h. 8 kirjainta, v‰h. 1 numero, v‰h. 1 iso kirjain).
 	 * @param sLista lista, jota l‰hdet‰‰n rajaamaan. 
 	 * @return rajattu lista
 	 */
@@ -117,7 +119,8 @@ public class XMLParser {
 	}
 	
 	/**
-	 * Palauttaa v‰h 15 merkki‰ pitk‰n salasanan
+	 * Palauttaa v‰h 15 merkki‰ pitk‰n salasanan KU-salasanaa varten.
+	 * KU-salasanalle vaatimus on v‰h. 15 merkin pituus.
 	 * @param sLista Lista k‰ytett‰vist‰ sanoista
 	 * @return v‰h 15 merkki‰ pitk‰n salasana
 	 */
@@ -154,7 +157,7 @@ public class XMLParser {
 	}
 	
 	/**
-	 * Kutsuu main-funktiota. Tein t‰n toisesta paketista kutsumista varten.
+	 * Kutsuu main-funktiota. Tehty toisesta paketista kutsumista varten (application-paketin alta).
 	 */
 	public static int[] mainCaller() {
 		main(null);

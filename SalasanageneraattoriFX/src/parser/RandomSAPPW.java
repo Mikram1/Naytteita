@@ -5,6 +5,11 @@ import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Arpoo satunnaisen SAP-salasanan erillisest‰ salasanatiedostosta.
+ * Ehtoina SAP-salasanalle on, ett‰ se on v‰hint‰‰n 8 merkki‰ pitk‰, sis‰lt‰‰ v‰hint‰‰n yhden numeron ja yhden ison kirjaimen.
+ * @author Mikko Toitturi
+ */
 public class RandomSAPPW {
 	
 	static File pwFile = new File("SAP-salasanat.txt");

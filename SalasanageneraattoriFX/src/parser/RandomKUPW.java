@@ -5,12 +5,17 @@ import java.io.FileNotFoundException;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Arpoo satunnaisen salasanan KU-salasanalistauksesta. 
+ * Ehtoina KU-salasanalle on, ett‰ salasana on v‰hint‰‰n 15 merkki‰ pitk‰.
+ * @author Mikko Toitturi
+ */
 public class RandomKUPW {
 
 	static File pwFile = new File("KU-salasanat.txt");
 
 	public static void main(String[] args) throws FileNotFoundException {
-		/**for(int i = 0; i < 11; i++)**/System.out.println(choose(pwFile));
+		System.out.println(choose(pwFile));
 	}
 	
 	/**

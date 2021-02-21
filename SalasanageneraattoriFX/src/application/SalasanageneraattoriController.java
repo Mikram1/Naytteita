@@ -11,6 +11,10 @@ import parser.RandomKUPW;
 import parser.RandomSAPPW;
 import parser.XMLParser;
 
+/**
+ * Controller salasanageneraattoriapplikaatiolle. Tehty Scenebuilderilla.
+ * @author Mikko Toitturi
+ */
 public class SalasanageneraattoriController {
 
 	private static final File KUpwFile = new File("KU-salasanat.txt");
