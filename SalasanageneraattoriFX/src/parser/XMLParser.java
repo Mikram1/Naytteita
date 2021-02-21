@@ -33,7 +33,8 @@ public class XMLParser {
 		kasisana = new ArrayList<String>();
 		viistoistsana = new ArrayList<String>();
 		
-		File xmlFile = new File("src/parser/kotus-sanalista_v1.xml");
+		File xmlFile = new File("kotus-sanalista_v1.xml");
+		//File xmlFile = new File("src/parser/kotus-sanalista_v1.xml");
 		parseToList(xmlFile);
 		
 		kasisana = parseToEight(sanalista);
